@@ -7,7 +7,7 @@ use yii\db\ActiveRecord;
  * @property ActiveRecord $owner
  * @author David Baltusavich <david@synatree.com>
  */
-abstract class ReadOnlyBehavior extends \yii\base\Behavior
+class ReadOnlyBehavior extends \yii\base\Behavior
 {
     private $locked = false;
 	public $latchProperty;
