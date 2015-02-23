@@ -11,6 +11,7 @@ class ReadOnlyBehavior extends \yii\base\Behavior
 {
     private $locked = false;
 	public $latchProperty;
+	public $failedFunction; // callback
     /**
      * Set an attribute if unlocked, or else do nothing.
      * @inheritdoc
@@ -18,6 +19,8 @@ class ReadOnlyBehavior extends \yii\base\Behavior
     public function __set($param, $value)
     {
         if ($this->locked) {
+			if( isset($this->failedFunction) && is_callable($this->failedFunction) )
+				call_user_func($this->failedFunction, $param, $value);
             return;
         } else {
             parent::__set($param, $value);
