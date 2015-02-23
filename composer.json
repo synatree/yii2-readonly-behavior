@@ -1,0 +1,21 @@
+{
+    "name": "synatree/yii2-readonly-behavior",
+    "description": "This behavior class allows you to specify an attribute which, upon setting or being set, prevents the model from being changed.  Think of it as a latch that locks the model once a particular value has been set and saved.",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","behavior","read-only","activerecord"],
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "David Baltusavich",
+            "email": "david@synatree.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "synatree\\behavior\\": ""
+        }
+    }
+}
