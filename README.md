@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist synatree/yii2-readonly-behavior "*"
+php composer.phar require synatree/yii2-readonly-behavior "*"
 ```
 
 or add
@@ -28,4 +28,7 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \synatree\behavior\AutoloadExample::widget(); ?>```
+use synatree\behaviors\ReadOnlyBehavior;
+
+
+```
